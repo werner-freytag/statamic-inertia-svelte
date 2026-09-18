@@ -1,0 +1,8 @@
+name: Werner
+super: true
+id: 02129744-0659-4b13-9f5a-5fc7478c5761
+password_hash: $2y$12$75/p2fZmibIQimmyDHS56.bQ0K8fWdLAMD0S0s4XsVfMMvd1/fRP6
+preferences:
+  collections:
+    pages:
+      view: tree

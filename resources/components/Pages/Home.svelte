@@ -1,6 +1,17 @@
-{{# Everything here is disposable — delete with the home entry. #}}
+<script>
+    let { title, content } = $props();
+</script>
+
+<svelte:head>
+    <link rel="preconnect" href="https://rsms.me" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+</svelte:head>
+
 <style>
-    @import url("https://rsms.me/inter/inter.css");
+    :global(body) {
+        margin: 0;
+    }
+
     @keyframes fade-up {
         from { opacity: 0; transform: translateY(12px); }
         to { opacity: 1; transform: translateY(0); }
@@ -48,7 +59,7 @@
                 Welcome to your new Statamic site
             </h1>
             <div class="mt-5 max-w-[48ch] text-lg/7 text-pretty text-zinc-600 dark:text-zinc-400 [&_:where(h1,h2,h3,h4,h5,h6)]:font-semibold [&_:where(h1,h2,h3,h4,h5,h6)]:tracking-tight [&_:where(h1,h2,h3,h4,h5,h6)]:text-balance [&_:where(h1,h2,h3,h4,h5,h6)]:text-zinc-950 dark:[&_:where(h1,h2,h3,h4,h5,h6)]:text-white [&_a]:font-medium [&_a]:text-zinc-950 [&_a]:underline [&_a]:decoration-zinc-950/20 [&_a]:underline-offset-3 hover:[&_a]:decoration-zinc-950 dark:[&_a]:text-white dark:[&_a]:decoration-white/25 dark:hover:[&_a]:decoration-white [&_strong]:font-semibold [&_strong]:text-zinc-950 dark:[&_strong]:text-white [&_p+p]:mt-4 [&_ul]:mt-4 [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:mt-4 [&_ol]:list-decimal [&_ol]:pl-5 [&_li+li]:mt-2">
-                {{ content | widont }}
+                {@html content ?? ""}
             </div>
         </div>
 
@@ -150,3 +161,4 @@
         </p>
     </footer>
 </div>
+
